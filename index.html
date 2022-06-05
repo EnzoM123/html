@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Coffe</title>
+    
+</head>
+<body>
+    <div class="result"></div>
+   
+   <script>
+var texto = "Dev Coffe";
+var result;
+
+var count = 0;
+function digitar() {
+  result = document.getElementById("result");
+  window.setTimeout(function() { inserir(texto[count]) }, 300);
+}
+
+function inserir(letra) {
+  result.innerHTML += letra;
+  count++;
+  if(count < texto.length)
+    window.setTimeout(function() { inserir(texto[count]) }, 300);
+}
+
+window.onload = digitar;
+</script>
+
+
+
+</body>
+</html>
